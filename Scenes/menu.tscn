@@ -1,0 +1,123 @@
+[gd_scene load_steps=4 format=3 uid="uid://gn4xmqd75m73"]
+
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_wwvmg"]
+[ext_resource type="VideoStream" path="res://Assets/main.ogv" id="2_tp2bv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bjxye"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wwvmg")
+
+[node name="Video" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 648.0
+stream = ExtResource("2_tp2bv")
+autoplay = true
+loop = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 2.0
+offset_right = 1153.0
+offset_bottom = 648.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/font_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0.666667, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bjxye")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_bjxye")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_bjxye")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_bjxye")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_bjxye")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_bjxye")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bjxye")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_bjxye")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bjxye")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_bjxye")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bjxye")
+text = "
+
+
+
+
+
+
+
+
+
+
+
+
+
+Enter the Game
+-------------------------------------------------------------------------------------------------------------------------------------------------------------"
+
+[node name="PingLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 438.0
+offset_top = 520.0
+offset_right = 476.0
+offset_bottom = 543.0
+theme_override_colors/font_color = Color(0, 0, 0.666667, 1)
+text = "ping:"
+
+[node name="FPSLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 647.0
+offset_top = 520.0
+offset_right = 675.0
+offset_bottom = 543.0
+theme_override_colors/font_color = Color(0, 0, 0.666667, 1)
+text = "fps:"
+
+[node name="Ping" type="Label" parent="."]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 520.0
+offset_right = 514.0
+offset_bottom = 543.0
+theme_override_colors/font_color = Color(0, 0.933333, 0, 1)
+text = "100"
+
+[node name="FPS" type="Label" parent="."]
+layout_mode = 0
+offset_left = 685.0
+offset_top = 520.0
+offset_right = 713.0
+offset_bottom = 543.0
+theme_override_colors/font_color = Color(0, 0.933333, 0, 1)
+text = "100"
+
+[node name="ServerLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 523.0
+offset_top = 565.0
+offset_right = 573.0
+offset_bottom = 588.0
+theme_override_colors/font_color = Color(0, 0, 0.666667, 1)
+text = "server:"
+
+[node name="Server" type="Label" parent="."]
+layout_mode = 0
+offset_left = 587.0
+offset_top = 564.0
+offset_right = 637.0
+offset_bottom = 587.0
+theme_override_colors/font_color = Color(0.933333, 0, 0, 1)
+text = "offline"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
